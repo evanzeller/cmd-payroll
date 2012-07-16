@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="xsd">
+        <file>payroll.xsd</file>        
+    </qresource>
+</RCC>
+    

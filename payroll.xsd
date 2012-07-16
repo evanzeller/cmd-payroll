@@ -1,0 +1,41 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="employee">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:group ref="objectGroup" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:group name="objectGroup">
+    <xs:choice>
+        <xs:element name="hourlyEmployee" type="hourlyType"/>
+        <xs:element name="salaryEmployee" type="salaryType"/>
+    </xs:choice>
+</xs:group>
+
+<xs:group name="objectmembersGroup">
+    <xs:sequence>
+        <xs:element name="firstName" type="xs:string"/>
+        <xs:element name="lastName" type="xs:string"/>
+    </xs:sequence>
+</xs:group>
+
+<xs:complexType name="hourlyType">
+    <xs:sequence>
+        <xs:group ref="objectmembersGroup"/>
+        <xs:element name="hours" type="xs:double"/>
+        <xs:element name="payRate" type="xs:double"/>
+        <xs:element name="overtime" type="xs:double"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="salaryType">
+    <xs:sequence>
+        <xs:group ref="objectmembersGroup"/>
+        <xs:element name="payRate" type="xs:double"/>
+    </xs:sequence>
+</xs:complexType>
+
+</xs:schema>

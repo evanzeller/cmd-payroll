@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="payroll.xsd">
+    <hourlyEmployee>
+        <firstName>John</firstName>
+        <lastName>Smith</lastName>
+        <hours>40</hours>
+        <payRate>10.50</payRate>
+        <overtime>5.00</overtime>
+    </hourlyEmployee>
+
+    <salaryEmployee>
+        <firstName>David</firstName>
+        <lastName>Jones</lastName>
+        <payRate>30000</payRate>
+    </salaryEmployee>
+
+</employee>
